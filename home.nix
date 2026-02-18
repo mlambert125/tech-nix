@@ -140,6 +140,10 @@ in {
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
         ms-dotnettools.csharp
+        bbenoist.nix
+        eamodio.gitlens
+        mongodb.mongodb-vscode
+        humao.rest-client
       ];
     };
   };
@@ -217,6 +221,8 @@ in {
     nix-direnv.enable = true;
   };
 
+  programs.claude-code.enable = true;
+
   ########################################################################
   # User Services
   ########################################################################
@@ -283,7 +289,6 @@ in {
     freerdp
     vscode
     discord
-    slack
     gimp3
     bitwarden-desktop
     filezilla
@@ -293,6 +298,7 @@ in {
     qimgv
     openfortivpn
     shotcut
+    libreoffice
 
     postman
 

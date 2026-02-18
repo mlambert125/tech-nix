@@ -118,6 +118,12 @@
       }
     ];
   };
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
+  };
 
   ########################################################################
   # System Services
@@ -144,6 +150,10 @@
   services.udisks2.enable = true;
   services.gvfs.enable = true;
   services.flatpak.enable = true;
+  services.samba = {
+    enable = true;
+    openFirewall = true;
+  };
 
   ########################################################################
   # System Packages
@@ -152,5 +162,7 @@
     home-manager
     qemu
     quickemu
+
+    cifs-utils
   ];
 }
